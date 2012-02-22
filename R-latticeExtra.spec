@@ -1,28 +1,26 @@
-%bcond_without bootstrap
+%bcond_with bootstrap
 %global packname  latticeExtra
 %global rlibdir  %{_datadir}/R/library
 
 Name:             R-%{packname}
 Version:          0.6_19
-Release:          1
+Release:          2
 Summary:          Extra Graphical Utilities Based on Lattice
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/%{packname}_0.6-19.tar.gz
 BuildArch:        noarch
-Requires:         R-core
-Requires:         R-RColorBrewer R-lattice 
-Requires:         R-lattice R-grid 
-%if %{with bootstrap}
-%else
-Requires:         R-maps R-mapproj R-deldir R-tripack R-quantreg R-zoo R-MASS R-mgcv 
+Requires:         R-core R-RColorBrewer R-lattice R-lattice R-grid
+%if %{without bootstrap}
+Requires:         R-maps R-mapproj R-deldir R-tripack R-quantreg R-zoo
+Requires:         R-MASS R-mgcv
 %endif
-BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-RColorBrewer R-lattice
-BuildRequires:    R-lattice R-grid 
-%if %{with bootstrap}
-%else
-BuildRequires:    R-maps R-mapproj R-deldir R-tripack R-quantreg R-zoo R-MASS R-mgcv 
+BuildRequires:    R-devel Rmath-devel texlive-collection-latex R-RColorBrewer
+BuildRequires:    R-lattice R-lattice R-grid
+%if %{without bootstrap}
+BuildRequires:    R-maps R-mapproj R-deldir R-tripack R-quantreg R-zoo
+BuildRequires:    R-MASS R-mgcv
 %endif
 
 %description
