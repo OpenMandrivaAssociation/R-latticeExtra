@@ -4,7 +4,7 @@
 
 Name:             R-%{packname}
 Version:          0.6_19
-Release:          2
+Release:          3
 Summary:          Extra Graphical Utilities Based on Lattice
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
