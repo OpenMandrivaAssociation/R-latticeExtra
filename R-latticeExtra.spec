@@ -1,15 +1,15 @@
-%bcond_with bootstrap
+%bcond_without bootstrap
 %global packname  latticeExtra
 %global rlibdir  %{_datadir}/R/library
 
 Name:             R-%{packname}
-Version:          0.6_19
-Release:          3
+Version:          0.6.26
+Release:          1
 Summary:          Extra Graphical Utilities Based on Lattice
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
 URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
-Source0:          http://cran.r-project.org/src/contrib/%{packname}_0.6-19.tar.gz
+Source0:          http://cran.r-project.org/src/contrib/latticeExtra_0.6-26.tar.gz
 BuildArch:        noarch
 Requires:         R-core R-RColorBrewer R-lattice R-lattice R-grid
 %if %{without bootstrap}
@@ -54,3 +54,4 @@ rm -f %{buildroot}%{rlibdir}/R.css
 %{rlibdir}/%{packname}/data
 %{rlibdir}/%{packname}/help
 %{rlibdir}/%{packname}/scripts
+
