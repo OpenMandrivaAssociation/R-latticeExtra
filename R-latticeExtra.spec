@@ -8,7 +8,7 @@ Release:          1
 Summary:          Extra Graphical Utilities Based on Lattice
 Group:            Sciences/Mathematics
 License:          GPL (>= 2)
-URL:              http://cran.r-project.org/web/packages/%{packname}/index.html
+URL:              https://cran.r-project.org/web/packages/%{packname}/index.html
 Source0:          http://cran.r-project.org/src/contrib/latticeExtra_0.6-26.tar.gz
 BuildArch:        noarch
 Requires:         R-core R-RColorBrewer R-lattice R-lattice R-grid
